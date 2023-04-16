@@ -1,0 +1,254 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/sprites/wood-1047377_960_720.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/genius.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/blue.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/red.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/yellow.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/green.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/start.png" type="Texture" id=7]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://assets/font/KOMIKAX_.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = SubResource( 6 )
+
+[node name="Game" type="CanvasLayer"]
+script = ExtResource( 8 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="Genius" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 2 )
+
+[node name="Colors" type="Control" parent="Genius"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Red" type="TextureRect" parent="Genius/Colors"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 4 )
+
+[node name="Blue" type="TextureRect" parent="Genius/Colors"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 3 )
+
+[node name="Yellow" type="TextureRect" parent="Genius/Colors"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+
+[node name="Green" type="TextureRect" parent="Genius/Colors"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 6 )
+
+[node name="Buttons" type="Control" parent="Genius"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="Red" type="Button" parent="Genius/Buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 9.0
+margin_top = -181.0
+margin_right = 181.0
+margin_bottom = -9.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Blue" type="Button" parent="Genius/Buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 9.0
+margin_top = 9.0
+margin_right = 181.0
+margin_bottom = 181.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Yellow" type="Button" parent="Genius/Buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -181.0
+margin_top = 9.0
+margin_right = -9.0
+margin_bottom = 181.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Green" type="Button" parent="Genius/Buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -181.0
+margin_top = -181.0
+margin_right = -9.0
+margin_bottom = -9.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Start" type="TextureRect" parent="Genius"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 7 )
+
+[node name="BtnStart" type="Button" parent="Genius"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = -54.0
+margin_right = 54.0
+margin_bottom = 54.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="LabelRound" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 516.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 7 )
+text = "Rodada: 1"
+valign = 1
+
+[node name="LabelSequence" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 500.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 7 )
+text = "Sequência: 1"
+valign = 1
+
+[node name="LabelRoundRecord" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -500.0
+margin_top = -120.0
+margin_right = -16.0
+margin_bottom = -66.0
+custom_fonts/font = SubResource( 7 )
+text = "Rodada: 1"
+align = 2
+valign = 1
+
+[node name="LabelRecord" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -214.0
+margin_top = -180.0
+margin_right = -16.0
+margin_bottom = -100.0
+custom_fonts/font = SubResource( 7 )
+text = "Recorde:"
+align = 2
+valign = 1
+
+[node name="LabelSequenceRecord" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -500.0
+margin_top = -70.0
+margin_right = -16.0
+margin_bottom = -16.0
+custom_fonts/font = SubResource( 7 )
+text = "Sequência: 1"
+align = 2
+valign = 1
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]

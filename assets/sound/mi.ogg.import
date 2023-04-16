@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mi.ogg-bbef25d4601153cb1d16b82d7af9b5bc.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/mi.ogg"
+dest_files=[ "res://.import/mi.ogg-bbef25d4601153cb1d16b82d7af9b5bc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
